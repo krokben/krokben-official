@@ -1,0 +1,32 @@
+body, .logo {
+    background: violet;
+}
+
+.navbar li a:hover {
+    color: violet;
+}
+
+#hiddenMenu li a:hover {
+    color: violet;
+}
+
+.goback {
+    color: violet;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.goback:hover {
+    color: #999;
+    cursor: pointer;
+}
+
+.white-background {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.snart {
+    font-size: 15vw;
+    text-align: center;
+}

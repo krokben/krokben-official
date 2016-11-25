@@ -1,0 +1,140 @@
+/* Misc. */
+
+body, .logo {
+    background: violet;
+}
+
+.navbar li a:hover {
+    color: violet;
+}
+
+#hiddenMenu li a:hover {
+    color: violet;
+}
+
+.goback {
+    color: violet;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.goback:hover {
+    color: #999;
+    cursor: pointer;
+}
+
+.white-background {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+/* Gallery */
+
+.gallery-container {
+    width: 90%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.gallery-item {
+    box-sizing: border-box;
+    width: 100%;
+    position: static;
+    cursor: default;
+}
+
+.gallery-item img {
+    width: 100%;
+}
+
+.gallery-item:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; height:98%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 700ms;
+    -webkit-transition: all 700ms;
+    display: none;
+}
+
+.gallery-item:hover:after {
+    opacity: 0;
+}
+
+/* Lightbox */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    display: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    overflow: hidden;
+}
+
+.lightboxDiv {
+    position: relative;
+    top: 15%;
+    width: 100%;
+}
+
+.lightbox img {
+    width: 100%;
+    height: auto;
+    max-width: 640px;
+    max-height: auto;
+}
+
+.arrows {
+    color: #ccc;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    top: 35%;
+    font-size: 10em;
+}
+
+.arrows:hover {
+    color: violet;
+}
+
+#leftArrow {
+    cursor: pointer;
+}
+
+#rightArrow {
+    cursor: pointer;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 600px) {
+/* For tablets: */
+.gallery-item {width: 49.5%; cursor: pointer; position: relative;}
+.gallery-item:hover:after {opacity: 1;}
+.gallery-item:after {display: inline;}
+.logo {position: relative;}
+}
+
+@media only screen and (min-width: 768px) {
+/* For tablets: */
+.gallery-item {width: 33%;}
+}

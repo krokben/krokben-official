@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krokben.se</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/home.css" />
+    <link href="https://fonts.googleapis.com/css?family=Sunshiney|Open+Sans|VT323|Share+Tech+Mono" rel="stylesheet">
+</head>
+<body>
+<!-- Facebook share -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- Header with logo and navbar -->
+    <div id="hiddenMenu">
+        <ul>
+            <a id="trigram2">&#9776;</a>
+            <li><span>.</span><a href="index.html" class="active">hem</a></li>
+            <li><span>.</span><a href="portfolio.html">portfolio</a></li>
+            <li><span>.</span><a href="cv.html">cv</a></li>
+        </ul>
+    </div>
+    <div class="container mobile-background">
+        <a href="index.html"><div class="logo">krokben.se</div></a>
+        <nav class="item navbar">
+            <ul>
+                <li><span>.</span><a href="index.html" class="active">hem</a></li>
+                <li><span>.</span><a href="portfolio.html">portfolio</a></li>
+                <li><span>.</span><a href="cv.html">cv</a></li>
+                <li class="icon"><a id="trigram">&#9776;</a></li>
+            </ul>
+        </nav>
+<!-- Countdowns -->
+        <div class="countdown-container">
+            <div class="item clockdiv" id="clockdiv">
+                <h3>LiA</h3>
+                <span class="days"></span>:<span class="hours">
+                </span>:<span class="minutes"></span>:<span class="seconds"></span>
+            </div>
+            <div class="item clockdiv" id="clockdiv2">
+                <h3>Examen</h3>
+                <span class="days"></span>:<span class="hours">
+                </span>:<span class="minutes"></span>:<span class="seconds"></span>
+            </div>
+        </div>
+<!-- Cartoon character div -->
+        <div class="item arrow" id="profile"></div>
+    </div>
+<!-- Pattern background div + about div -->
+    <div class="container pattern">
+        <section class="about">
+            <h1>tommy svensson, frontend-utvecklare</h1>
+            <p>Söker ni en utvecklare till ert projekt? Leta ej längre. Jag är mannen ni
+                söker. Med nästan 2 månaders erfarenhet av frontend-utveckling under bältet
+                kan jag lova att leverera den bästa tänkbara användarupplevelsen till er
+                hemsida/applikation. Jag har erfarenhet inom följande områden:</p>
+            <ul class="about-ul">
+                <li><span>HTML</span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>PHP</span></li>
+                <li><span>Design</span></li>
+                <li><span>MS Paint</span></li>
+                <li><span>Git/Github</span></li>
+            </ul>
+        </section>
+    </div>
+<!-- Empty whitespace div -->
+    <div class="whitespace"></div>
+<!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-item">
+            <ul class="footer-ul">
+                <li><a href="index.html">hem</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="cv.html">cv</a></li>
+            </ul>
+        </div>
+        <div class="footer-item footer-pattern"></div>
+        <div class="footer-item">
+            <div class="footer-item-item">
+<!-- Social media share buttons -->
+                <div class="fb-share-button" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">Share</a></div>
+                <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/Share"></script>
+            </div>
+            <div class="footer-item-item">&#169; 2016 <a href="mailto:svensson.tommy@student.kyh.se">Tommy Svensson</a></div>
+        </div>
+    </footer>
+
+    <script src="scripts/home.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

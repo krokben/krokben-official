@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krokben.se - kod</title>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/hemsidor.css" />
+    <link href="https://fonts.googleapis.com/css?family=Sunshiney|Open+Sans|VT323|Share+Tech+Mono" rel="stylesheet">
+</head>
+<body>
+<!-- Facebook share -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!-- Header with logo and navbar -->
+    <div id="hiddenMenu">
+        <ul>
+            <a id="trigram2">&#9776;</a>
+            <li><span>.</span><a href="index.html">hem</a></li>
+            <li><span>.</span><a href="portfolio.html" class="active">portfolio</a></li>
+            <li><span>.</span><a href="cv.html">cv</a></li>
+        </ul>
+    </div>
+    <div class="container mobile-background">
+        <a href="index.html"><div class="logo">krokben.se</div></a>
+        <nav class="item navbar">
+            <ul>
+                <a class="goback" id="goBack" href="portfolio.html">&#8672;</a>
+                <li><span>.</span><a href="index.html">hem</a></li>
+                <li><span>.</span><a href="portfolio.html" class="active">portfolio</a></li>
+                <li><span>.</span><a href="cv.html">cv</a></li>
+                <li class="icon"><a id="trigram">&#9776;</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="white-background">
+        <div class="snart">Kommer snart...</div>
+    </section>
+<!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-item">
+            <ul class="footer-ul">
+                <li><a href="index.html">hem</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="cv.html">cv</a></li>
+            </ul>
+        </div>
+        <div class="footer-item footer-pattern"></div>
+        <div class="footer-item">
+            <div class="footer-item-item">
+<!-- Social media share buttons -->
+                <div class="fb-share-button" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">Share</a></div>
+                <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/Share"></script>
+            </div>
+            <div class="footer-item-item">&#169; 2016 <a href="mailto:svensson.tommy@student.kyh.se">Tommy Svensson</a></div>
+        </div>
+    </footer>
+
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

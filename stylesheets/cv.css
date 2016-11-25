@@ -1,0 +1,309 @@
+/* Misc. */
+
+body {
+    background: orange;
+}
+
+a {
+    z-index: 9999;
+}
+
+.logo {
+    background: orange;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+
+#hiddenMenu li a:hover {
+    color: orange;
+}
+
+/* Hands */
+
+#hands {
+    display: block;
+    -webkit-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+}
+
+.righthand {
+    width: 100%;
+    height: 316px;
+    background-image: url("../images/righthand.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 0;
+    padding-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.lefthand {
+    width: 100%;
+    height: 316px;
+    background-image: url("../images/lefthand.png");
+    background-repeat: no-repeat;
+    margin-left: 0;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/* CV */
+
+.cv-cube-casing {
+    border: 5px solid orange;
+    /*padding: 0.5vw !important;*/
+    padding: 5px;
+    margin-right: 200px;
+    /*-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.cv-cube-casing:hover {
+    border-color: #999;
+}
+
+.cv-cube {
+    /*padding: 1vw 1.5vw 1.5vw 1vw !important;*/
+    /*-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+    background: rgb(244,214,122); /* Old browsers */ /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(244,214,122,1) 0%,rgba(234,153,53,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(244,214,122,1) 0%,rgba(234,153,53,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4d67a', endColorstr='#ea9935',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    width: 100px;
+    height: 100px;
+}
+
+.cv-cube-text {
+    color: #fff;
+    /*font-size: 4vw;*/
+    font-size: 4em;
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.cv-container {
+    min-height: 97vh;
+    background-image: url("../images/righthandbottom.png");
+    background-repeat: none;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 50%;
+    padding-top: 10px;
+}
+
+#cvContainer {
+    display: none;
+    -webkit-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+}
+
+.cv {
+    width:30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: none;
+}
+
+.cv-content {
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px dashed #ccc;
+}
+
+.cv-content h2 {
+    margin: 0;
+    border-bottom: 2px dashed #ccc;
+    cursor: pointer;
+}
+
+.cv-content h3 {
+    margin: 5px 0 0 0;
+}
+
+.cv-content p {
+    padding-left: 0;
+}
+
+.cv-line {
+    text-align: right;
+    color: #999;
+}
+
+.cv-cv-cube-casing {
+    border: 5px solid orange;
+    /*padding: 0.5vw !important;*/
+    padding: 5px;
+    /*-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.cv-cv-cube-casing:hover {
+    border-color: #999;
+}
+
+.cv-cv-cube {
+    /*padding: 1vw 1.5vw 1.5vw 1vw !important;*/
+    /*-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+    background: rgb(244,214,122); /* Old browsers */ /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(244,214,122,1) 0%,rgba(234,153,53,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(244,214,122,1) 0%,rgba(234,153,53,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4d67a', endColorstr='#ea9935',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.cv-cv-cube-text {
+    color: #fff;
+    /*font-size: 4vw;*/
+    font-size: 4em;
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.cv-item {
+    color: rgb(0, 0, 0);
+}
+
+.expanded {
+    font-size: 2.5vw;
+    width: 100%;
+    display: none;
+}
+
+/* About */
+
+#omContainer {
+    display: none;
+    -webkit-transition: opacity 400ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
+}
+
+.om {
+    width:30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: none;
+}
+
+.om-content {
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px dashed #ccc;
+    text-align: right;
+}
+
+.om-content h2 {
+    margin: 5px 0 0 0;
+}
+
+.omImg {
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.goback {
+    color: orange;
+    cursor: pointer;
+    font-size: 1.3em;
+    display: none;
+}
+
+.goback:hover {
+    color: #999;
+    cursor: pointer;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 583px) {
+/* For tablets: */
+    .cv {display: -webkit-box;display: -ms-flexbox;display: flex;}
+    .om {display: -webkit-box;display: -ms-flexbox;display: flex;}
+    .cv-content {width: 70%;margin-right: 40px;}
+    .om-content {width: 70%;}
+    .expanded {font-size: 2vw;}
+    .cv-line {text-align: left;}
+    .cv-container {
+        background-image: url("../images/lefthandbottom.png");
+        background-repeat: none;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 23%;
+    }
+    .cv {
+        background-image: url("../images/righthandbottom.png");
+        background-repeat: none;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 80%;
+    }
+    .cv-cube-casing {margin-right: 400px;}
+
+    .righthand {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;#
+    }
+
+    .lefthand {
+        padding-left: 340px;
+        width: 50%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+    .expanded {font-size: 1em;}
+    .om-content {width: 50%;}
+}
