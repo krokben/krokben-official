@@ -32,6 +32,18 @@ a {
     float: right;
 }
 
+#goBack {
+    display: none;
+    color: violet;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+#goBack:hover {
+    color: #999;
+    cursor: pointer;
+}
+
 /* Flexbox containers and items */
 
 .container {

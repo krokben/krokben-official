@@ -1,11 +1,11 @@
 var profile = document.getElementById('profile');
 
 profile.addEventListener('mouseover', function() {
-    this.style.backgroundImage = "url('../images/jagstor2.png')";
+    this.style.backgroundImage = "url('images/jagstor2.png')";
 });
 
 profile.addEventListener('mouseout', function() {
-    this.style.backgroundImage = "url('../images/jagstor.png')";
+    this.style.backgroundImage = "url('images/jagstor.png')";
 });
 
 //Countdown Timer made by https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies

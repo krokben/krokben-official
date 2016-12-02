@@ -20,7 +20,7 @@ body, .logo {
 
 .pf-container {
     width: 100%;
-    height: 80vh;
+    min-height: 90vh;
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;

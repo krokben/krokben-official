@@ -1,4 +1,4 @@
-//Expandera menyn
+// Show the hidden menu
 var trigram = document.getElementById("trigram");
 var trigram2 = document.getElementById("trigram2");
 var hiddenMenu = document.getElementById("hiddenMenu");
@@ -19,6 +19,53 @@ trigram2.addEventListener("click", function() {
         trigram.style.display = "inline";
         });
 });
+
+// Make active page active in navbar
+var hem = document.getElementById("hem");
+var portfolio = document.getElementById("portfolio");
+var cv = document.getElementById("cv");
+var goBack = document.getElementById("goBack");
+
+var urlsearch = location.search;
+
+if (urlsearch === "?p=home") {
+    if (hem.className.search(" active") === -1) {
+        hem.className += " active";
+    }
+    if (portfolio.className.search(" active") !== -1) {
+        portfolio.className.replace(" active", "");
+    }
+    if (cv.className.search(" active") !== -1) {
+        cv.className.replace(" active", "");
+    }
+}
+else if (urlsearch === "?p=portfolio" || urlsearch === "?p=gallery" || urlsearch === "?p=websites" || urlsearch === "?p=code") {
+    if (portfolio.className.search(" active") === -1) {
+        portfolio.className += " active";
+    }
+    if (hem.className.search(" active") !== -1) {
+        hem.className.replace(" active", "");
+    }
+    if (cv.className.search(" active") !== -1) {
+        cv.className.replace(" active", "");
+    }
+}
+else if (urlsearch === "?p=cv") {
+    if (cv.className.search(" active") === -1) {
+        cv.className += " active";
+    }
+    if (hem.className.search(" active") !== -1) {
+        hem.className.replace(" active", "");
+    }
+    if (portfolio.className.search(" active") !== -1) {
+        portfolio.className.replace(" active", "");
+    }
+}
+
+// Make goBack arrow appear
+if (urlsearch === "?p=gallery" || urlsearch === "?p=websites" || urlsearch === "?p=code") {
+    goBack.style.display = "inline";
+}
 
 // Facebook share
 (function(d, s, id) {

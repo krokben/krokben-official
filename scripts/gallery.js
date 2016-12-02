@@ -19,9 +19,9 @@ for (var i = 0; i < gallery.length; i++) {
         // Change to next or previous image when user clicks arrows
         leftArrow.addEventListener("click", function() {
             var x = lightboxDiv.innerHTML;
-            var a = x.slice(0, 20);
-            var b = Number(x.substr(20, 1));
-            var c = x.slice(21);
+            var a = x.slice(0, 17);
+            var b = Number(x.substr(17, 1));
+            var c = x.slice(18);
             if (b !== 1) {
             lightboxDiv.innerHTML = a + (b - 1) + c;
             }
@@ -32,9 +32,9 @@ for (var i = 0; i < gallery.length; i++) {
 
         rightArrow.addEventListener("click", function() {
             var x = lightboxDiv.innerHTML;
-            var a = x.slice(0, 20);
-            var b = Number(x.substr(20, 1));
-            var c = x.slice(21);
+            var a = x.slice(0, 17);
+            var b = Number(x.substr(17, 1));
+            var c = x.slice(18);
             if (b < gallery.length) {
             lightboxDiv.innerHTML = a + (b + 1) + c;
             }
