@@ -3,7 +3,7 @@ var lightbox = document.querySelector(".lightbox");
 var lightboxDiv = document.querySelector(".lightboxDiv");
 var leftArrow = document.getElementById("leftArrow");
 var rightArrow = document.getElementById("rightArrow");
-// var bod = document.body;
+var bod = document.body;
 
 var mq = window.matchMedia("(min-width: 600px)");
 

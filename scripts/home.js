@@ -1,11 +1,7 @@
-var profile = document.getElementById('profile');
-
-profile.addEventListener('mouseover', function() {
-    this.style.backgroundImage = "url('images/jagstor2.png')";
-});
-
-profile.addEventListener('mouseout', function() {
-    this.style.backgroundImage = "url('images/jagstor.png')";
+$('#profile').hover(function() {
+    $(this).css('background-image', 'url("images/jagstor2.png")');
+    }, function() {
+    $(this).css('background-image', 'url("images/jagstor.png")');
 });
 
 //Countdown Timer made by https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies
@@ -36,7 +32,7 @@ profile.addEventListener('mouseout', function() {
 
         function updateClock(){
             var t = getTimeRemaining(endtime);
-
+    
             daysSpan.innerHTML = t.days;
             hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
             minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
@@ -45,7 +41,7 @@ profile.addEventListener('mouseout', function() {
             if(t.total<=0){
                 clearInterval(timeinterval);
             }
-    }
+        }
 
     updateClock(); // run function once at first to avoid delay
     var timeinterval = setInterval(updateClock, 1000);

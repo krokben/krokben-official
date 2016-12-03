@@ -1,70 +1,65 @@
-// Show the hidden menu
-var trigram = document.getElementById("trigram");
-var trigram2 = document.getElementById("trigram2");
-var hiddenMenu = document.getElementById("hiddenMenu");
-var bod = document.body;
+$(document).ready(function(){
 
-trigram.addEventListener("click", function() {
-    hiddenMenu.style.opacity = "0.9";
-    hiddenMenu.style.display = "inline-block";
-    trigram.style.display = "none";
-    bod.style.overflow = "hidden"; // Prevent page from scrolling
-});
+    // Show the hidden menu
+    $('#trigram').on('click', function() {
+        $('#hiddenMenu').css('opacity', '0.9');
+        $('#hiddenMenu').show();
+        $(this).hide();
+        $('body').css('overflow', 'hidden'); // Prevent page from scrolling
+    });
 
-trigram2.addEventListener("click", function() {
-    hiddenMenu.style.opacity = "0";
-    bod.style.overflow = "auto"; // Make page scrollable again
-    hiddenMenu.addEventListener("transitionend", function() {
-        hiddenMenu.style.display = "none";
-        trigram.style.display = "inline";
-        });
+    $('#trigram2').on('click', function() {
+        $('#hiddenMenu').css('opacity', '0');
+        $('body').css('overflow', 'auto'); // Make page scrollable again
+        $('#hiddenMenu').on('transitionend', function() {
+            $('#hiddenMenu').hide();
+            $('#trigram').show();
+            });
+    });
+
+
 });
 
 // Make active page active in navbar
-var hem = document.getElementById("hem");
-var portfolio = document.getElementById("portfolio");
-var cv = document.getElementById("cv");
-var goBack = document.getElementById("goBack");
-
 var urlsearch = location.search;
 
-if (urlsearch === "?p=home") {
-    if (hem.className.search(" active") === -1) {
-        hem.className += " active";
+if (urlsearch === '?p=home' || urlsearch === '') {
+    if ($('#hem').hasClass('active') === false) {
+        $('#hem').addClass('active');
     }
-    if (portfolio.className.search(" active") !== -1) {
-        portfolio.className.replace(" active", "");
+    if ($('#portfolio').hasClass('active')) {
+        $('#portfolio').removeClass('active');
     }
-    if (cv.className.search(" active") !== -1) {
-        cv.className.replace(" active", "");
-    }
-}
-else if (urlsearch === "?p=portfolio" || urlsearch === "?p=gallery" || urlsearch === "?p=websites" || urlsearch === "?p=code") {
-    if (portfolio.className.search(" active") === -1) {
-        portfolio.className += " active";
-    }
-    if (hem.className.search(" active") !== -1) {
-        hem.className.replace(" active", "");
-    }
-    if (cv.className.search(" active") !== -1) {
-        cv.className.replace(" active", "");
+    if ($('#cv').hasClass('active')) {
+        $('#cv').removeClass('active');
     }
 }
-else if (urlsearch === "?p=cv") {
-    if (cv.className.search(" active") === -1) {
-        cv.className += " active";
+else if (urlsearch === '?p=portfolio' || urlsearch === '?p=gallery' || urlsearch === '?p=websites' || urlsearch === '?p=code') {
+    if ($('#porfolio').hasClass('active') === false) {
+        $('#portfolio').addClass('active');
     }
-    if (hem.className.search(" active") !== -1) {
-        hem.className.replace(" active", "");
+    if ($('#hem').hasClass('active')) {
+        $('#hem').removeClass('active');
     }
-    if (portfolio.className.search(" active") !== -1) {
-        portfolio.className.replace(" active", "");
+    if ($('#cv').hasClass('active')) {
+        $('#cv').removeClass('active');
+    }
+}
+else if (urlsearch === '?p=cv') {
+    if ($('#cv').hasClass('active') === false) {
+        $('#cv').addClass('active');
+    }
+    if ($('#hem').hasClass('active')) {
+        $('#hem').removeClass('active');
+    }
+    if ($('#portfolio').hasClass('active')) {
+        $('#portfolio').removeClass('active');
     }
 }
 
 // Make goBack arrow appear
-if (urlsearch === "?p=gallery" || urlsearch === "?p=websites" || urlsearch === "?p=code") {
-    goBack.style.display = "inline";
+if (urlsearch === '?p=gallery' || urlsearch === '?p=websites' || urlsearch === '?p=code') {
+    $('#goBack').show();
 }
 
 // Facebook share

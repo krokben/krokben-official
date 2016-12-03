@@ -47,6 +47,8 @@
                         <h3>Gratistidningsutdelare<span class="floatRight">hösten 2006</span></h3>
                         <p>Aftonbladet .SE / Academic Work, Stockholm</p>
                     </div>
+                </div>
+                <div>
                     <h2 class="cv-item">IT</h2>
                     <div class="expanded" id="IT">
                         <p>HTML</p>
@@ -57,12 +59,16 @@
                         <p>Git/Github</p>
                         <p>Photoshop</p>
                     </div>
+                </div>
+                <div>
                     <h2 class="cv-item">Språk</h2>
                     <div class="expanded" id="Språk">
                         <p>Svenska, modersmål</p>
                         <p>Engelska, mycket goda kunskaper</p>
                         <p>Japanska, goda kunskaper</p>
                     </div>
+                </div>
+                <div>
                     <h2 class="cv-item">Övrigt</h2>
                     <div class="expanded" id="Övrigt">
                         <p>B-körkort</p>
