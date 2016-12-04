@@ -1,21 +1,21 @@
 $(document).ready(function(){
 
-    // Show the hidden menu
-    $('#trigram').on('click', function() {
-        $('#hiddenMenu').css('opacity', '0.9');
-        $('#hiddenMenu').show();
-        $(this).hide();
-        $('body').css('overflow', 'hidden'); // Prevent page from scrolling
-    });
+// Show the hidden menu
+$('#trigram').on('click', function() {
+    $('#hiddenMenu').css('opacity', '0.9');
+    $('#hiddenMenu').show();
+    $(this).hide();
+    $('body').css('overflow', 'hidden'); // Prevent page from scrolling
+});
 
-    $('#trigram2').on('click', function() {
-        $('#hiddenMenu').css('opacity', '0');
-        $('body').css('overflow', 'auto'); // Make page scrollable again
-        $('#hiddenMenu').on('transitionend', function() {
-            $('#hiddenMenu').hide();
-            $('#trigram').show();
-            });
-    });
+$('#trigram2').on('click', function() {
+    $('#hiddenMenu').css('opacity', '0');
+    $('body').css('overflow', 'auto'); // Make page scrollable again
+    $('#hiddenMenu').on('transitionend', function() {
+        $('#hiddenMenu').hide();
+        $('#trigram').show();
+        });
+});
 
 
 });
@@ -61,6 +61,13 @@ else if (urlsearch === '?p=cv') {
 if (urlsearch === '?p=gallery' || urlsearch === '?p=websites' || urlsearch === '?p=code') {
     $('#goBack').show();
 }
+
+// Listen for keypress to execute Hangman game
+$(document).on('keydown', function(e) {
+    if (e.ctrlKey && (String.fromCharCode(e.which).toLowerCase() === 'h')) {
+        $('iframe').toggle().attr('src', 'hangman/index.html');
+    }
+});
 
 // Facebook share
 (function(d, s, id) {

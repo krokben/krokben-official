@@ -1,0 +1,15 @@
+#wordbox {
+    display: flex;
+    font-size: 3em;
+    text-align: center;
+}
+
+#wordbox div {
+    margin: 5px;
+    width: 3%;
+    border-bottom: 2px solid black;
+}
+
+#resetButton {
+    display: none;
+}

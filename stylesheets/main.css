@@ -268,6 +268,18 @@ a {
     line-height: 0 !important;
 }
 
+/* Hangman game */
+iframe {
+    position: fixed;
+    top: 0;
+    margin-top: 88px;
+    width: 190vh;
+    height: 100vh;
+    background: #fff;
+    border: none;
+    display: none;
+}
+
 /* Responsiveness */
 
 @media only screen and (min-width: 600px) {
