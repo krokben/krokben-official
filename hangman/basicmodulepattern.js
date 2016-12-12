@@ -6,7 +6,8 @@ var hangmanGame = (function() {
     var wrong = document.getElementById('wrong');
     var resetButton = document.getElementById('resetButton');
 
-    var words = ['KRUKA', 'KALSONGER', 'ENCYKLOPEDI', 'FALUKORV', 'ALTAN', 'BALKONG', 'MOROT'];
+    var words = ['KRUKA', 'KALSONGER', 'ENCYKLOPEDI', 'FALUKORV', 'ALTAN',
+    'BALKONG', 'MOROT', 'PAPRIKA'];
     var word = '';
     var counter = 0;
     var points = 0;
@@ -43,12 +44,11 @@ var hangmanGame = (function() {
     }
 
     function guess(event) {
-        // If less than 7 guesses has been made, make the guess
-        if (counter < 7) {
+        // If less than 6 guesses has been made, make the guess
+        if (counter < 6) {
             var key_press = String.fromCharCode(event.keyCode);
         	var key_code = event.keyCode;
             var letters = document.querySelectorAll('.' + key_press);
-
             // If guess is correct, show letter
             if (letters[0] && (letters[0].style.opacity !== '1')) {
                 for (var i = 0; i < letters.length; i++) {
@@ -75,6 +75,8 @@ var hangmanGame = (function() {
         } else {
             hangman.innerHTML = 'Du är död och den.';
             resetButton.style.display = 'block';
+            counter++;
+            hangman.innerHTML = '<img src="' + 7 + '.png" />';
         }
     }
 
@@ -87,5 +89,3 @@ var hangmanGame = (function() {
     }
 
 })();
-
-hangmanGame();

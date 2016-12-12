@@ -1,3 +1,7 @@
+<?php
+$db = mysqli_connect('krokben-219508.mysql.binero.se', '219508_aq20643','crookbone' , '219508-krokben');
+mysqli_query($db, "SET NAMES utf8");
+?>
 <!DOCTYPE html>
 <html>
 <head>

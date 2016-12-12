@@ -65,7 +65,7 @@ if (urlsearch === '?p=gallery' || urlsearch === '?p=websites' || urlsearch === '
 // Listen for keypress to execute Hangman game
 $(document).on('keydown', function(e) {
     if (e.ctrlKey && (String.fromCharCode(e.which).toLowerCase() === 'h')) {
-        $('iframe').toggle().attr('src', 'hangman/index.html');
+        $('iframe').toggle().focus().attr('src', 'hangman/index.html');
     }
 });
 

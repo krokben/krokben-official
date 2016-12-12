@@ -46,3 +46,51 @@ var timeinterval = setInterval(updateClock, 1000);
 
 initializeClock('#clockdiv', lia);
 initializeClock('#clockdiv2', examen);
+
+// Mail form
+$('#submitButton').click(function(event){
+
+    event.preventDefault(); // Stop form from submitting normally
+
+    var vname = $('#name').val();
+    var vemail = $('#email').val();
+    var vmessage = $('#message').val();
+
+    if(vname === '' || vemail === '' || vmessage === '') {
+        $('#messageSuccess').hide();
+        $('#messageFail').fadeIn().html('Var vänlig fyll i alla fält innan ni skickar.');
+    } else {
+
+    $.post('confirmation.php', //Required URL of the page on server
+    { // Data Sending With Request To Server
+        name: vname,
+        email: vemail,
+        message: vmessage
+    },
+    function(response,status) { // Required Callback Function
+        $('#messageFail').hide();
+        $('#messageSuccess').fadeIn().html(response);//'response' receives - whatever written in echo of above PHP script.
+        $('#form')[0].reset();
+    });
+    }
+});
+
+// Error messages in placeholders in mail form
+$('#name').focusout(function() {
+    if ($(this).val().length < 3 || $(this).val().length > 20) {
+        $(this).attr('placeholder', 'Måste vara mellan 3 och 20 karaktärer.').addClass('error_message').val('');
+    }
+});
+
+$('#email').focusout(function() {
+    var pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    if (pattern.test($('#email').val()) === false) {
+        $(this).attr('placeholder', 'Var vänlig skriv in en korrekt email-adress').addClass('error_message').val('');
+    }
+});
+
+$('#message').focusout(function() {
+    if ($(this).val().length < 3) {
+        $(this).attr('placeholder', 'Måste vara minst 3 karaktärer.').addClass('error_message').val('');
+    }
+});

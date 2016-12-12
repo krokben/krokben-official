@@ -13,13 +13,13 @@
     <div id="hiddenMenu">
         <ul>
             <a id="trigram2">&#9776;</a>
-            <li><span>.</span><a class="nav-home">hem</a></li>
-            <li><span>.</span><a class="nav-portfolio">portfolio</a></li>
-            <li><span>.</span><a class="nav-cv">cv</a></li>
+            <li><span>.</span><a href="?p=home" class="nav-home">hem</a></li>
+            <li><span>.</span><a href="?p=portfolio" class="nav-portfolio">portfolio</a></li>
+            <li><span>.</span><a href="?p=cv" class="nav-cv">cv</a></li>
         </ul>
     </div>
     <div class="container mobile-background">
-        <a href="index.html"><div class="logo">krokben.se</div></a>
+        <a href="?p=home"><div class="logo">krokben.se</div></a>
         <nav class="item navbar">
             <ul>
                 <a href="?p=portfolio" id="goBack">&#8672;</a>

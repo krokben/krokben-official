@@ -36,6 +36,21 @@
         </section>
     </div>
 <!-- Empty whitespace div -->
-    <div class="whitespace"></div>
+    <div class="whitespace">
+            <form id="mailForm">
+                <div class="mailform">
+                    <h3 class="contact-header">.kontakta mig</h3>
+                    <label>Namn</label>
+                    <input type="text" placeholder="Namn" pattern="[A-Za-z\s]{1,20}" name="name" required id="name">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="e@mail.com" name="email" required id="email"><br>
+                    <label>Meddelande</label><br>
+                    <textarea placeholder="Meddelande" name="message" required id="message"></textarea>
+                    <input type="submit" name="submit" value=".skicka" id="submitButton">
+                    <div id="messageFail"></div>
+                    <div id="messageSuccess"></div>
+                </div>
+            </form>
+    </div>
 
 <script src="scripts/home.js"></script>

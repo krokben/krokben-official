@@ -122,16 +122,102 @@
     color: DeepSkyBlue;
 }
 
-.about-ul span{
+.about-ul span {
     color: #000;
 }
 
 /* Empty space */
 
 .whitespace {
-    display: none;
     background: #fff;
-    min-height: 25vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -20px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+/* Mailform */
+
+.mailform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-header {
+    color: #999;
+    width: 100%;
+}
+
+.mailform label {
+    display: none;
+}
+
+.mailform input[type=text], input[type=email], textarea {
+    border: 5px solid white;
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.mailform textarea {
+    height: 150px;
+    margin-top: -35px;
+}
+
+.mailform input[type=submit] {
+    border: 5px solid white;
+    box-shadow:
+      0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    width: 165px;
+    color: #999;
+    width: 40%;
+    margin-bottom: 25px;
+}
+
+#messageFail {
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    background: #D46A6A;
+    padding: 5px;
+    border: 2px solid #AA3939;
+    display: none;
+}
+
+#messageSuccess {
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    background: #55AA55;
+    padding: 5px;
+    border: 2px solid #2D882D;
+    display: none;
+}
+
+.error_message::-webkit-input-placeholder {
+    color: red;
 }
 
 /* Media queries */
@@ -150,8 +236,18 @@
 /* For tablets: */
     .countdown-container {width: 70%;}
     .arrow {display: block; width: 25%; background-size: 100%;}
-    .about {width: 400px; margin: 150px 150px 0 0;}
     .mobile-background {background-image: none;}
     .pattern {height: 500px;}
+    .mailform {width: 402px;}
+}
+
+@media only screen and (min-width: 920px) {
+    .about {width: 400px; margin: 150px 7% 0 0;}
     .whitespace {display: block;}
+    .mailform {margin-left: 20px;}
+}
+
+@media only screen and (min-width: 1080px) {
+/* For desktop: */
+    .mailform {margin-left: 7%;}
 }
