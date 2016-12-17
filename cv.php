@@ -13,7 +13,7 @@
                     <div class="expanded" id="Utbildning">
                         <?php
                             $query = "
-                                SELECT * FROM education
+                                SELECT * FROM Utbildning
                                 ORDER BY id;
                             ";
 
@@ -25,7 +25,7 @@
                                 $paragraph = $row['paragraph'];
                                 echo "<h3>$header <span class='floatRight'>$date</span></h3>
                                 <p>$paragraph</p>";
-                                }
+                            }
                         ?>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="expanded" id="Arbetslivserfarenhet">
                         <?php
                             $query = "
-                                SELECT * FROM work
+                                SELECT * FROM Arbetslivserfarenhet
                                 ORDER BY id;
                             ";
 
@@ -46,7 +46,7 @@
                                 $paragraph = $row['paragraph'];
                                 echo "<h3>$header <span class='floatRight'>$date</span></h3>
                                 <p>$paragraph</p>";
-                                }
+                            }
                         ?>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="expanded" id="IT">
                         <?php
                             $query = "
-                                SELECT * FROM it
+                                SELECT * FROM IT
                                 ORDER BY id;
                             ";
 
@@ -64,7 +64,7 @@
                             while($row = mysqli_fetch_assoc($result)) {
                                 $paragraph = $row['paragraph'];
                                 echo "<p>$paragraph</p>";
-                                }
+                            }
                         ?>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <div class="expanded" id="Språk">
                         <?php
                             $query = "
-                                SELECT * FROM languages
+                                SELECT * FROM Språk
                                 ORDER BY id;
                             ";
 
@@ -82,7 +82,7 @@
                             while($row = mysqli_fetch_assoc($result)) {
                                 $paragraph = $row['paragraph'];
                                 echo "<p>$paragraph</p>";
-                                }
+                            }
                         ?>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     <div class="expanded" id="Övrigt">
                         <?php
                             $query = "
-                                SELECT * FROM misc
+                                SELECT * FROM Övrigt
                                 ORDER BY id;
                             ";
 
@@ -100,7 +100,7 @@
                             while($row = mysqli_fetch_assoc($result)) {
                                 $paragraph = $row['paragraph'];
                                 echo "<p>$paragraph</p>";
-                                }
+                            }
                         ?>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     while($row = mysqli_fetch_assoc($result)) {
                         $paragraph = $row['paragraph'];
                         echo "<p>$paragraph</p>";
-                        }
+                    }
                 ?>
             </article>
         </div>

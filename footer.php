@@ -2,9 +2,10 @@
     <footer class="footer-container">
         <div class="footer-item">
             <ul class="footer-ul">
-                <li><a href="index.html">hem</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="cv.html">cv</a></li>
+                <li><a href="?p=home">hem</a></li>
+                <li><a href="?p=portfolio">portfolio</a></li>
+                <li><a href="?p=cv">cv</a></li>
+                <li><a href="?p=login">login</a></li>
             </ul>
         </div>
         <div class="footer-item footer-pattern"></div>

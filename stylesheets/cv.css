@@ -49,6 +49,15 @@ a {
     border-bottom: 2px dashed #ccc;
 }
 
+.cv-header-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv-header-text h4 {
+    margin: 0;
+}
+
 .cv-line {
     color: #999;
 }
