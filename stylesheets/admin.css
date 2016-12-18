@@ -1,0 +1,29 @@
+body {
+    background: #00CC66;
+}
+
+.logo {
+    background: #00CC66;
+}
+
+footer {
+    background: #00CC66;
+}
+
+.orange {
+    color: #00CC66;
+}
+
+.trash {
+    height: 14px;
+    cursor: pointer;
+}
+
+.cv-paragraph {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aboutParagraph {
+    margin-top: 59px;
+}

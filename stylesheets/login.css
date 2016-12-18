@@ -1,0 +1,28 @@
+body {
+    background: #00CC66;
+}
+
+.logo {
+    background: #00CC66;
+}
+
+footer {
+    background: #00CC66;
+}
+
+.login-container {
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container div {
+    background: #00CC66;
+    padding: 15px 30px 15px 30px;
+    border-radius: 15px;
+}
+
+.login-container form input {
+    margin-bottom: 5px;
+}

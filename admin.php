@@ -27,9 +27,9 @@
                                     $paragraph = $row['paragraph'];
                                     echo "<div class='cv-header-text'><h3 contenteditable>$header</h3>
                                     <h4 contenteditable>$date</h4></div>
-                                    <p contenteditable>$paragraph</p>";
+                                    <span class='cv-paragraph'><p contenteditable>$paragraph</p><img class='trash' src='images/trash.png' /></span>";
                                 }
-                        echo "</div>
+                        echo "<button class='add-item'>+ lägg till</button></div>
                     </div>
                     <div>
                         <h2 class='cv-item'>Arbetslivserfarenhet</h2>
@@ -47,9 +47,9 @@
                                     $paragraph = $row['paragraph'];
                                     echo "<div class='cv-header-text'><h3 contenteditable>$header</h3>
                                     <h4 contenteditable>$date</h4></div>
-                                    <p contenteditable>$paragraph</p>";
+                                    <span class='cv-paragraph'><p contenteditable>$paragraph</p><img class='trash' src='images/trash.png' /></span>";
                                     }
-                        echo "</div>
+                        echo "<button class='add-item'>+ lägg till</button></div>
                     </div>
                     <div>
                         <h2 class='cv-item'>IT</h2>
@@ -63,9 +63,9 @@
 
                                 while($row = mysqli_fetch_assoc($result)) {
                                     $paragraph = $row['paragraph'];
-                                    echo "<p contenteditable>$paragraph</p>";
+                                    echo "<span class='cv-paragraph'><p contenteditable>$paragraph</p><img class='trash' src='images/trash.png' /></span>";
                                     }
-                        echo "</div>
+                        echo "<button class='add-item-paragraph'>+ lägg till</button></div>
                     </div>
                     <div>
                         <h2 class='cv-item'>Språk</h2>
@@ -79,9 +79,9 @@
 
                                 while($row = mysqli_fetch_assoc($result)) {
                                     $paragraph = $row['paragraph'];
-                                    echo "<p contenteditable>$paragraph</p>";
+                                    echo "<span class='cv-paragraph'><p contenteditable>$paragraph</p><img class='trash' src='images/trash.png' /></span>";
                                     }
-                        echo "</div>
+                        echo "<button class='add-item-paragraph'>+ lägg till</button></div>
                     </div>
                     <div>
                         <h2 class='cv-item'>Övrigt</h2>
@@ -95,9 +95,9 @@
 
                                 while($row = mysqli_fetch_assoc($result)) {
                                     $paragraph = $row['paragraph'];
-                                    echo "<p contenteditable>$paragraph</p>";
+                                    echo "<span class='cv-paragraph'><p contenteditable>$paragraph</p><img class='trash' src='images/trash.png' /></span>";
                                     }
-                        echo "</div>
+                        echo "<button class='add-item-paragraph'>+ lägg till</button></div>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
 
                         while($row = mysqli_fetch_assoc($result)) {
                             $paragraph = $row['paragraph'];
-                            echo "<p contenteditable>$paragraph</p>";
+                            echo "<p id='aboutParagraph' contenteditable>$paragraph</p>";
                             }
                 echo "</article>
             </div>
@@ -127,7 +127,9 @@
     }
     else {
         echo "
-        <div class='white-background'>
+        <link rel='stylesheet' type='text/css' href='stylesheets/login.css' />
+
+        <div class='login-container white-background'>
             Fel användarnamn eller lösenord.
         </div>";
     }

@@ -10,15 +10,14 @@ $paragraph = $_POST['paragraph'];
 $id = $_POST['id'];
 
 if (isset($_POST['header'])) {
-    $sql = "UPDATE $title SET header='$header' WHERE date='$id'";
+    // Update header
+    $sql = "UPDATE $title SET header='$header' WHERE id='$id'";
 } else if (isset($_POST['date'])) {
-    $sql = "UPDATE $title SET date='$date' WHERE header='$id'";
+    // Update date
+    $sql = "UPDATE $title SET date='$date' WHERE id='$id'";
 } else if (isset($_POST['paragraph'])) {
-    if (!isset($_POST['noheader'])) {
-        $sql = "UPDATE $title SET paragraph='$paragraph' WHERE header='$id'";
-    } else {
-        $sql = "UPDATE $title SET paragraph='$paragraph' WHERE id='$id'";
-    }
+    // Update paragraph
+    $sql = "UPDATE $title SET paragraph='$paragraph' WHERE id='$id'";
 }
 
 mysqli_query($db, $sql);
