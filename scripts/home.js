@@ -53,10 +53,11 @@ $('#submitButton').click(function(event){
     event.preventDefault(); // Stop form from submitting normally
 
     var vname = $('#name').val();
+    var vphone = $('#phone').val();
     var vemail = $('#email').val();
     var vmessage = $('#message').val();
 
-    if(vname === '' || vemail === '' || vmessage === '') {
+    if(vname === '' || vphone === '' || vemail === '' || vmessage === '') {
         $('#messageSuccess').hide();
         $('#messageFail').fadeIn().html('Var vänlig fyll i alla fält innan ni skickar.');
     } else {
@@ -64,13 +65,23 @@ $('#submitButton').click(function(event){
     $.post('confirmation.php', //Required URL of the page on server
     { // Data Sending With Request To Server
         name: vname,
+        phone: vphone,
         email: vemail,
         message: vmessage
     },
     function(response,status) { // Required Callback Function
         $('#messageFail').hide();
         $('#messageSuccess').fadeIn().html(response);//'response' receives - whatever written in echo of above PHP script.
-        $('#form')[0].reset();
+        $('form')[0].reset();
+        // Remove error messages
+        $('#name').removeClass('error_message');
+        $('#name').attr('placeholder', 'Namn');
+        $('#phone').removeClass('error_message');
+        $('#phone').attr('placeholder', 'Telefonnummer');
+        $('#email').removeClass('error_message');
+        $('#email').attr('placeholder', 'e@mail.com');
+        $('#message').removeClass('error_message');
+        $('#message').attr('placeholder', 'Meddelande');
     });
     }
 });
@@ -78,19 +89,26 @@ $('#submitButton').click(function(event){
 // Error messages in placeholders in mail form
 $('#name').focusout(function() {
     if ($(this).val().length < 3 || $(this).val().length > 20) {
-        $(this).attr('placeholder', 'Måste vara mellan 3 och 20 karaktärer.').addClass('error_message').val('');
+        $(this).attr('placeholder', 'Måste vara mellan 3 och 20 tecken.').addClass('error_message').val('');
+    }
+});
+
+$('#phone').focusout(function() {
+    var pattern = new RegExp(/^[\s()+-]*([0-9][\s()+-]*){6,20}$/);
+    if (pattern.test($(this).val()) === false) {
+        $(this).attr('placeholder', 'Endast siffror och + är tillåtna.').addClass('error_message').val('');
     }
 });
 
 $('#email').focusout(function() {
     var pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-    if (pattern.test($('#email').val()) === false) {
-        $(this).attr('placeholder', 'Var vänlig skriv in en korrekt email-adress').addClass('error_message').val('');
+    if (pattern.test($(this).val()) === false) {
+        $(this).attr('placeholder', 'Var vänlig skriv in en korrekt email-adress.').addClass('error_message').val('');
     }
 });
 
 $('#message').focusout(function() {
     if ($(this).val().length < 3) {
-        $(this).attr('placeholder', 'Måste vara minst 3 karaktärer.').addClass('error_message').val('');
+        $(this).attr('placeholder', 'Måste vara minst 3 tecken.').addClass('error_message').val('');
     }
 });

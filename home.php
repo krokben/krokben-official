@@ -40,9 +40,11 @@
             <form id="mailForm">
                 <div class="mailform">
                     <h3 class="contact-header">.kontakta mig</h3>
-                    <label>Namn</label>
+                    <label for="name">Namn</label>
                     <input type="text" placeholder="Namn" pattern="[A-Za-z\s]{1,20}" name="name" required id="name">
-                    <label>E-mail</label>
+                    <label for="phone">Telefon</label>
+                    <input type="text" placeholder="Telefonnummer" name="phone" required id="phone">
+                    <label for="email">E-mail</label>
                     <input type="email" placeholder="e@mail.com" name="email" required id="email"><br>
                     <label>Meddelande</label><br>
                     <textarea placeholder="Meddelande" name="message" required id="message"></textarea>

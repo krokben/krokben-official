@@ -10,20 +10,60 @@ footer {
     background: #00CC66;
 }
 
-.orange {
+.navbar li a:hover {
+    color: #00CC66 !important;
+}
+
+.white-background {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.white-background div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+.fa-arrow-down, .fa-arrow-up, .fa-trash {
+    cursor: pointer;
+}
+.fa-arrow-down:hover, .fa-arrow-up:hover, .fa-trash:hover {
     color: #00CC66;
 }
 
-.trash {
-    height: 14px;
+td[data-type="header"], td[data-type="date"] {
+    font-weight: bold;
+}
+
+th {
+    font-size: 30px;
+    text-align: left;
+}
+
+button {
+    background: #00CC66;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.cv-paragraph {
-    display: flex;
-    justify-content: space-between;
-}
-
-#aboutParagraph {
-    margin-top: 59px;
+button:hover {
+    background: #999;
 }

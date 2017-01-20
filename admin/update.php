@@ -3,21 +3,17 @@
 $db = mysqli_connect('localhost', 'root','' , 'krokben');
 mysqli_query($db, "SET NAMES utf8");
 
-$title = $_POST['title'];
-$header = $_POST['header'];
-$date = $_POST['date'];
-$paragraph = $_POST['paragraph'];
-$id = $_POST['id'];
+$obj = json_decode($_POST['tableData'], true);
 
-if (isset($_POST['header'])) {
-    // Update header
-    $sql = "UPDATE $title SET header='$header' WHERE id='$id'";
-} else if (isset($_POST['date'])) {
-    // Update date
-    $sql = "UPDATE $title SET date='$date' WHERE id='$id'";
-} else if (isset($_POST['paragraph'])) {
-    // Update paragraph
-    $sql = "UPDATE $title SET paragraph='$paragraph' WHERE id='$id'";
+if (isset($_POST['tableData'])) {
+	foreach ($obj as $item) {
+		$category = $item['category'];
+		$header = $item['header'];
+		$date = $item['date'];
+		$paragraph = $item['paragraph'];
+		$sql = "INSERT INTO cv (category, header, date, paragraph)
+				VALUES ('$category', '$header', '$date', '$paragraph')";
+
+		mysqli_query($db, $sql);
+	}
 }
-
-mysqli_query($db, $sql);

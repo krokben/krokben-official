@@ -3,9 +3,14 @@
 $db = mysqli_connect('localhost', 'root','' , 'krokben');
 mysqli_query($db, "SET NAMES utf8");
 
-$paragraph = $_POST['paragraph'];
+$obj = json_decode($_POST['tableData'], true);
 
-if (isset($_POST['paragraph'])) {
-    $sql = "UPDATE about SET paragraph='$paragraph' WHERE id='1'";
-    mysqli_query($db, $sql);
+if (isset($_POST['tableData'])) {
+	foreach ($obj as $item) {
+		$paragraph = $item['paragraph'];
+		$sql = "INSERT INTO about (paragraph)
+				VALUES ('$paragraph')";
+
+		mysqli_query($db, $sql);
+	}
 }

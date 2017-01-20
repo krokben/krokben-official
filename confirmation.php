@@ -4,11 +4,12 @@ $db = mysqli_connect('localhost', 'root','' , 'krokben');
 
 if($_POST) {
     $name = $_POST['name'];
+    $phone = $_POST['phone'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $sql = "INSERT INTO messages (name, email, message)
-    VALUES ('$name', '$email', '$message')";
+    $sql = "INSERT INTO messages (name, phone, email, message)
+    VALUES ('$name', '$phone', '$email', '$message')";
 
     if ($db->query($sql) === TRUE) {
         echo "Tack för ert mail!";
@@ -17,7 +18,7 @@ if($_POST) {
     }
 
     // Send email
-        mail("svensson.tommy@student.kyh.se", "Mail till krokben.se från " . $email, $message);
+        // mail("svensson.tommy@student.kyh.se", "Mail till krokben.se från " . $email, $message);
 }
 
 ?>
