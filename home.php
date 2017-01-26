@@ -18,6 +18,9 @@
         </div> <!-- Close the navbar -->
 <!-- Pattern background div + about div -->
     <div class="container pattern">
+        <div>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/BpPiv_P43wE"></iframe> <!-- Video -->
+        </div>
         <section class="about">
             <h1>tommy svensson, frontend-utvecklare</h1>
             <p>Söker ni en utvecklare till ert projekt? Leta ej längre. Jag är mannen ni

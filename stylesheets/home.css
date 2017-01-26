@@ -83,9 +83,16 @@
     height: 100vh;
     border-top: 1px solid #CFCFCF;
     border-bottom: 1px solid #CFCFCF;
+    display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+}
+
+.pattern div {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 /* About me textbox */
@@ -245,6 +252,7 @@
     .about {width: 400px; margin: 150px 7% 0 0;}
     .whitespace {display: block;}
     .mailform {margin-left: 20px;}
+    .pattern div {margin-top: 80px; margin-bottom: 0;}
 }
 
 @media only screen and (min-width: 1080px) {
