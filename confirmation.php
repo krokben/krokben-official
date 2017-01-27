@@ -1,18 +1,18 @@
 <?php
-// $db = mysqli_connect('krokben-219508.mysql.binero.se', '219508_aq20643','crookbone' , '219508-krokben');
-$db = mysqli_connect('localhost', 'root','' , 'krokben');
+
+include('admin/db.php');
 
 if($_POST) {
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = mysqli_real_escape_string($db, $_POST['name']);
+    $phone = mysqli_real_escape_string($db, $_POST['phone']);
+    $email = mysqli_real_escape_string($db, $_POST['email']);
+    $message = mysqli_real_escape_string($db, $_POST['message']);
 
     $sql = "INSERT INTO messages (name, phone, email, message)
     VALUES ('$name', '$phone', '$email', '$message')";
 
     if ($db->query($sql) === TRUE) {
-        echo "Tack för ert mail!";
+        echo "Tack för ert meddelande!";
     } else {
         echo "Tyvärr, där blev det något fel. Vänligen försök igen.";
     }

@@ -1,6 +1,6 @@
 <?php
-$db = mysqli_connect('localhost', 'root','' , 'krokben');
-mysqli_query($db, "SET NAMES utf8");
+
+include('db.php');
 
 $sql = "SELECT * FROM cv";
 $result = mysqli_query($db, $sql);

@@ -1,3 +1,6 @@
+<?php
+    include('admin/db.php');
+?>
 </div> <!-- Close the navbar -->
 <link rel="stylesheet" type="text/css" href="stylesheets/cv.css" />
 
@@ -13,7 +16,8 @@
                     <div class="expanded" id="Utbildning">
                         <?php
                             $query = "
-                                SELECT * FROM Utbildning
+                                SELECT * FROM cv
+                                WHERE category = 'Utbildning'
                                 ORDER BY id;
                             ";
 
@@ -34,7 +38,8 @@
                     <div class="expanded" id="Arbetslivserfarenhet">
                         <?php
                             $query = "
-                                SELECT * FROM Arbetslivserfarenhet
+                                SELECT * FROM cv
+                                WHERE category = 'Arbetslivserfarenhet'
                                 ORDER BY id;
                             ";
 
@@ -55,7 +60,8 @@
                     <div class="expanded" id="IT">
                         <?php
                             $query = "
-                                SELECT * FROM IT
+                                SELECT * FROM cv
+                                WHERE category = 'IT'
                                 ORDER BY id;
                             ";
 
@@ -73,7 +79,8 @@
                     <div class="expanded" id="Språk">
                         <?php
                             $query = "
-                                SELECT * FROM Språk
+                                SELECT * FROM cv
+                                WHERE category = 'Språk'
                                 ORDER BY id;
                             ";
 
@@ -91,7 +98,8 @@
                     <div class="expanded" id="Övrigt">
                         <?php
                             $query = "
-                                SELECT * FROM Övrigt
+                                SELECT * FROM cv
+                                WHERE category = 'Övrigt'
                                 ORDER BY id;
                             ";
 

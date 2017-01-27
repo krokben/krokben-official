@@ -10,6 +10,20 @@ footer {
     background: #00CC66;
 }
 
+.logout-header {
+    background: #fff;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.logout-header a {
+    color: #000;
+}
+
+.logout-header a:hover {
+    color: #00CC66;
+}
+
 .navbar li a:hover {
     color: #00CC66 !important;
 }

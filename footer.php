@@ -5,7 +5,7 @@
                 <li><a href="?p=home">hem</a></li>
                 <li><a href="?p=portfolio">portfolio</a></li>
                 <li><a href="?p=cv">cv</a></li>
-                <li><a href="?p=login">login</a></li>
+                <li><a href="?p=admin">admin</a></li>
             </ul>
         </div>
         <div class="footer-item footer-pattern"></div>

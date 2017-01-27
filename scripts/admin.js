@@ -62,6 +62,7 @@ $(document).ready(function() {
         }
         $($item).insertAfter($grandParent);
         moveItem(); // Bind arrows
+        bindEvents(); // Bind events
     }
 
     function deleteItem() {
@@ -169,8 +170,6 @@ $(document).ready(function() {
                     obj["paragraph"] = $(this).find('[data-type="paragraph"]').html();
                 } else { // If no header, only give paragraph
                     obj["category"] = $(this).prevAll('.category').first().children().children().first().html();
-                    obj["header"] = $(this).find('[data-type="header"]').html();
-                    obj["date"] = $(this).find('[data-type="date"]').html();
                     obj["paragraph"] = $(this).find('[data-type="paragraph"]').html();
                 }
             } else {

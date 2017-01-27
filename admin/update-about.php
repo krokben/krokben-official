@@ -1,13 +1,12 @@
 <?php
-// $db = mysqli_connect('krokben-219508.mysql.binero.se', '219508_aq20643','crookbone' , '219508-krokben');
-$db = mysqli_connect('localhost', 'root','' , 'krokben');
-mysqli_query($db, "SET NAMES utf8");
+
+include('db.php');
 
 $obj = json_decode($_POST['tableData'], true);
 
 if (isset($_POST['tableData'])) {
 	foreach ($obj as $item) {
-		$paragraph = $item['paragraph'];
+		$paragraph = mysqli_real_escape_string($db, $item['paragraph']);
 		$sql = "INSERT INTO about (paragraph)
 				VALUES ('$paragraph')";
 
