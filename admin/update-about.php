@@ -2,14 +2,14 @@
 
 include('db.php');
 
-$obj = json_decode($_POST['tableData'], true);
+$paragraph = $_POST['paragraph'];
 
-if (isset($_POST['tableData'])) {
-	foreach ($obj as $item) {
-		$paragraph = mysqli_real_escape_string($db, $item['paragraph']);
-		$sql = "INSERT INTO about (paragraph)
-				VALUES ('$paragraph')";
+if (isset($paragraph)) {
+		$paragraph = mysqli_real_escape_string($db, $paragraph);
+		$sql = "UPDATE about 
+				SET paragraph = '$paragraph'
+				WHERE id = 1
+		";
 
 		mysqli_query($db, $sql);
-	}
 }

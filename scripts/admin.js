@@ -12,11 +12,11 @@ $(document).ready(function() {
     // bind events
     function bindEvents() {
         $('.add-item').on('click', addItem);
-        $('.fa-trash').on('click', deleteItem);
         $('#updateList').on('click', updateList);
         $('#updateAbout').on('click', updateAbout);
         $('#updateList').on('blur', changeButtonText);
         $('#updateAbout').on('blur', changeButtonText);
+        $('.fa-trash').on('click', deleteItem);
     }
 
     function changeButtonText() {
@@ -60,9 +60,10 @@ $(document).ready(function() {
                         </tr>
                     </tbody>`
         }
+
         $($item).insertAfter($grandParent);
         moveItem(); // Bind arrows
-        bindEvents(); // Bind events
+        $('.fa-trash').on('click', deleteItem); // Re-bind delete icons
     }
 
     function deleteItem() {
@@ -205,30 +206,14 @@ $(document).ready(function() {
     }
 
     function updateAbout() {
-        let jsonObj = [];
-        let obj = {};
-        obj["paragraph"] = $('#aboutMeParagraph').html();
-
-        jsonObj.push(obj);
-
-        $.ajax({
-            url: 'admin/truncate-about.php',
-            type: 'POST',
-            data: 'truncate',
-            success: function(data) {
-                // console.log(data);
-            },
-            error: function (req, status, err) {
-                console.log('Something went wrong', status, err);
-            }
-        });
+        $paragraph = $('#aboutMeParagraph').html();
 
         $.ajax({
             url: 'admin/update-about.php',
             type: 'POST',
-            data: {tableData:JSON.stringify(jsonObj)},
+            data: {paragraph: $paragraph},
             success: function(data) {
-                // console.log(data);
+                console.log(data);
                 $('#updateAbout').html('Succé');
             },
             error: function (req, status, err) {
